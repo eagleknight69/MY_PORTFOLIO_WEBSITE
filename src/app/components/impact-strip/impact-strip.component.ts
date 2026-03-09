@@ -1,0 +1,42 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { LucideAngularModule, Trophy, Zap, Award } from 'lucide-angular';
+import { resumeData } from '../../data/resume';
+import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive';
+
+@Component({
+  selector: 'app-impact-strip',
+  standalone: true,
+  imports: [CommonModule, LucideAngularModule, ScrollRevealDirective],
+  template: `
+    <section class="py-12 border-y border-white/5 bg-white/[0.02] backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            *ngFor="let achievement of resumeData.achievements; let i = index"
+            appScrollReveal [delay]="i * 100"
+            class="flex items-start gap-4"
+          >
+            <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-emerald-400">
+              <lucide-icon [name]="getIconName(i)" class="w-6 h-6"></lucide-icon>
+            </div>
+            <div>
+              <h3 class="text-white font-medium mb-1">{{ achievement.title }}</h3>
+              <p class="text-sm text-white/50 leading-relaxed">
+                {{ achievement.context }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  `
+})
+export class ImpactStripComponent {
+  resumeData = resumeData;
+  icons = ['zap', 'trophy', 'award'];
+
+  getIconName(index: number): string {
+    return this.icons[index % this.icons.length];
+  }
+}

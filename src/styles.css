@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050505;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+/* Print styles for resume download */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  nav, footer, .fixed, canvas {
+    display: none !important;
+  }
+  section {
+    page-break-inside: avoid;
+    padding: 2rem 0 !important;
+  }
+}

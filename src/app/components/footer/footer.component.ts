@@ -1,0 +1,35 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { LucideAngularModule, Mail, Phone, Linkedin, Github } from 'lucide-angular';
+import { resumeData } from '../../data/resume';
+
+@Component({
+  selector: 'app-footer',
+  standalone: true,
+  imports: [CommonModule, LucideAngularModule],
+  template: `
+    <footer class="py-12 border-t border-white/10 bg-black/40">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-white/50 text-sm">
+          © {{ currentYear }} {{ resumeData.basics.name }}. All rights reserved.
+        </div>
+        
+        <div class="flex items-center gap-6">
+          <a [href]="'mailto:' + resumeData.basics.email" class="text-white/50 hover:text-white transition-colors">
+            <lucide-icon name="mail" class="w-5 h-5"></lucide-icon>
+          </a>
+          <a [href]="'tel:' + resumeData.basics.phone" class="text-white/50 hover:text-white transition-colors">
+            <lucide-icon name="phone" class="w-5 h-5"></lucide-icon>
+          </a>
+          <a *ngFor="let link of resumeData.basics.links" [href]="link.url" target="_blank" rel="noopener noreferrer" class="text-white/50 hover:text-white transition-colors">
+            <lucide-icon name="linkedin" class="w-5 h-5"></lucide-icon>
+          </a>
+        </div>
+      </div>
+    </footer>
+  `
+})
+export class FooterComponent {
+  resumeData = resumeData;
+  currentYear = new Date().getFullYear();
+}
