@@ -2,104 +2,151 @@ export const resumeData = {
   basics: {
     name: "Devaditya",
     title: "Software Engineer",
-    summary: "Software Engineer with hands-on experience in building full-stack web applications using Python (FastAPI) and Angular. Developed secure, role-based user management systems with JWT authentication, MongoDB integration, and clean architectural patterns. Recently built and integrated an AI-powered chatbot using local LLMs (Ollama), with a strong interest in Generative AI, RAG systems, and AI-driven applications.",
+    specialization: "Backend & Full-Stack Developer",
+    techLine: "FastAPI • Angular • AI Systems",
+    availability: "Open to Software Engineer / Backend roles",
+    summary: "Software Engineer with hands-on experience in building full-stack web applications using Python (FastAPI) and Angular. Developed secure, role-based user management systems with JWT authentication, MongoDB integration, and clean architectural patterns.",
+    credibilityBullets: [
+      "Built full-stack RBAC user management system using FastAPI and Angular",
+      "Implemented secure authentication using JWT and role-based access control",
+      "Developed AI chatbot using local LLMs (Ollama)",
+      "Designed scalable backend architectures and REST APIs"
+    ],
     location: "Noida, Uttar Pradesh, India",
     email: "devaditya.yadav14@gmail.com",
     phone: "9315997912",
     links: [
-      {
-        name: "LinkedIn",
-        url: "https://linkedin.com/in/devaditya-yadav"
-      }
+      { name: "LinkedIn", url: "https://linkedin.com/in/devaditya-yadav", icon: "linkedin" },
+      { name: "GitHub", url: "https://github.com/Devaditya-Yadav", icon: "github" }
     ]
   },
+  credibilityBar: [
+    { label: "2+ Years Development Experience", icon: "calendar" },
+    { label: "Multiple Full-Stack Projects", icon: "layers" },
+    { label: "Backend & AI Systems", icon: "cpu" },
+    { label: "Freelance Product Work", icon: "briefcase" }
+  ],
   experience: [
     {
       company: "kinzall.com",
       role: "Angular Developer (Freelance)",
-      dates: "September 2023 - March 2024",
+      dates: "Sept 2023 - Mar 2024",
       location: "San José, Costa Rica",
+      techStack: "Angular, TypeScript, REST APIs, Google Analytics",
       bullets: [
-        "Developed the landing page using Angular 13, HTML, SCSS, and TypeScript.",
-        "Developed an Admin section for monitoring sellers, buyers, and offers.",
-        "Implemented SEO optimization to increase the Performance, Accessibility of the Website and scored 90%.",
-        "Organized and implemented Google Analytics. Integrated backend APIs into the front end of the website, optimizing data retrieval and enhancing user experience resulting in a 40% decrease in page load time and a 25% increase in conversion rate.",
-        "Enhanced cross-browser compatibility by refactoring UI components and standardizing CSS practices, ensuring consistent functionality and appearance across diverse platforms."
+        "Developed high-performance landing page and admin dashboard using Angular 13.",
+        "Achieved 90% SEO Performance & Accessibility score through optimization.",
+        "Reduced page load time by 40% and increased conversion rate by 25% via API optimization.",
+        "Refactored UI components for cross-browser compatibility and standardized CSS."
       ]
     },
     {
       company: "D2i technology",
       role: "Software Development Engineer Intern",
-      dates: "February 2023 - September 2023",
-      location: "Noida, Uttar Pradesh",
+      dates: "Feb 2023 - Sept 2023",
+      location: "Noida, India",
+      techStack: "SQL, PL/SQL, Python, Signal-cli, ERP Systems",
       bullets: [
-        "As a full-stack engineer at D2i Technology, I actively developed innovative software solutions for a diverse range of clients, focusing on both front-end and back-end development.",
-        "During my time in this position, I significantly enhanced the application by resolving numerous bugs, optimizing code for improved performance, and ensuring responsiveness across all devices.",
-        "Proficient in SQL/PLSQL for querying and data management within ERP frameworks like SAP.",
-        "Achievements: I received recognition from management for consistently delivering projects ahead of schedule while maintaining the highest quality standards. Additionally, I introduced new features, improved accessibility, and successfully integrated Signal-cli with the backend."
+        "Developed innovative software solutions focusing on full-stack responsiveness.",
+        "Optimized code performance and resolved critical bugs in production.",
+        "Integrated Signal-cli with backend for automated messaging services.",
+        "Received management recognition for delivering high-quality projects ahead of schedule."
       ]
-    }
-  ],
-  achievements: [
-    {
-      title: "SEO Optimization",
-      context: "Scored 90% in Performance and Accessibility for kinzall.com."
-    },
-    {
-      title: "Performance Improvement",
-      context: "40% decrease in page load time and a 25% increase in conversion rate at kinzall.com."
-    },
-    {
-      title: "Management Recognition",
-      context: "Consistently delivered projects ahead of schedule while maintaining the highest quality standards at D2i technology."
     }
   ],
   projects: [
     {
       title: "AI-Powered User Management System",
-      stack: ["FastAPI (Python)", "Angular", "MongoDB", "Ollama"],
-      dates: "January 2026 - Present",
-      type: "Self-Initiated Project",
+      stack: ["FastAPI", "Angular", "MongoDB", "JWT", "Ollama"],
+      dates: "Jan 2026 - Present",
+      type: "Engineering Project",
+      description: "A secure RBAC system with integrated local AI assistance.",
+      architecture: "Angular → FastAPI → Service Layer → MongoDB",
       bullets: [
-        "Designed and developed a full-stack user management system using FastAPI (Python) and Angular, supporting 3 distinct roles (User, Manager, Admin) with secure role-based access control (RBAC).",
-        "Implemented JWT-based authentication and authorization, securing 100% of protected APIs, including password hashing with bcrypt and role restricted admin endpoints.",
-        "Built an Admin Dashboard to view, update, block/unblock, and delete user accounts, enabling complete lifecycle management for multiple user records.",
-        "Integrated an AI-powered chatbot using a local LLM (Ollama) to provide real-time conversational assistance, reducing dependency on static UI workflows and improving user interaction.",
-        "Designed a scalable backend architecture using repository and service layers with MongoDB, exposing sanitized user data (0 sensitive fields leaked) to the frontend.",
-        "Improved system reliability by handling edge cases such as blocked users, token expiry, and role validation, ensuring secure access control across all application flows."
-      ]
+        "Role-based authentication (User, Manager, Admin) with secure RBAC.",
+        "Secure JWT authentication with bcrypt password hashing.",
+        "Admin dashboard for complete user lifecycle management.",
+        "AI chatbot assistant powered by local LLM (Ollama).",
+        "Clean architecture with service and repository layers."
+      ],
+      links: {
+        github: "https://github.com/Devaditya-Yadav",
+        demo: "#",
+        architecture: "#"
+      },
+      image: "https://picsum.photos/seed/auth/800/450"
     },
     {
-      title: "VR Hosting & Virtual Tour SaaS for Hotels and Restaurants",
-      stack: ["FastAPI (Python)", "Jinja2", "SQLite"],
-      dates: "January 2026 - Present",
-      type: "Self-Initiated Product Project",
+      title: "VR Hosting & SaaS Platform",
+      stack: ["FastAPI", "Jinja2", "SQLite", "JWT"],
+      dates: "Jan 2026 - Present",
+      type: "Product Project",
+      description: "B2B SaaS for hosting 360° VR virtual tours for hospitality.",
+      architecture: "FastAPI → Jinja2 → SQLite → Iframe Embeds",
       bullets: [
-        "Developed a B2B SaaS backend using Python (FastAPI) to host and serve 360° VR virtual tours for hotels and restaurants.",
-        "Designed a modular backend architecture with separate modules for VR, hotels, subscriptions, and authentication.",
-        "Built secure REST APIs and server-rendered embed views using FastAPI and Jinja2 for iframe-based VR tour access.",
-        "Implemented JWT-based authentication and dependency-driven authorization to protect embedded VR content.",
-        "Used SQLite for development and designed database models to support future migration to PostgreSQL."
-      ]
+        "Modular backend architecture for VR, subscriptions, and auth.",
+        "Secure REST APIs and server-rendered embed views.",
+        "JWT-based dependency-driven authorization for content protection.",
+        "Scalable database design ready for PostgreSQL migration."
+      ],
+      links: {
+        github: "https://github.com/Devaditya-Yadav",
+        demo: "#",
+        architecture: "#"
+      },
+      image: "https://picsum.photos/seed/vr/800/450"
     }
   ],
   skills: [
     {
-      category: "Core Technical Skills",
-      items: [
-        "Python", "JavaScript", "SQL", "Angular", "HTML", "CSS", "FastAPI", "REST APIs", "JWT", "MongoDB", "AI Chatbot Development (Ollama)", "Prompt Engineering", "Git", "GitHub", "RBAC", "Clean Architecture"
-      ]
+      category: "Languages",
+      items: ["Python", "JavaScript", "SQL", "TypeScript"]
+    },
+    {
+      category: "Frontend",
+      items: ["Angular", "HTML5", "CSS3", "Tailwind CSS"]
+    },
+    {
+      category: "Backend",
+      items: ["FastAPI", "REST APIs", "JWT Authentication", "RBAC"]
+    },
+    {
+      category: "Databases",
+      items: ["MongoDB", "SQLite", "PostgreSQL (Learning)"]
+    },
+    {
+      category: "AI / LLM",
+      items: ["Ollama", "Prompt Engineering", "RAG Concepts"]
+    },
+    {
+      category: "Tools",
+      items: ["Git", "GitHub", "Docker (Learning)"]
     }
+  ],
+  github: {
+    stats: [
+      { label: "Commits", value: "200+" },
+      { label: "Top Languages", value: "Python, TS" },
+      { label: "Focus", value: "FastAPI & AI" }
+    ]
+  },
+  systemDesign: [
+    { title: "RBAC Authentication System", description: "Secure multi-role access control flow." },
+    { title: "SaaS VR Hosting Architecture", description: "Modular B2B content delivery system." },
+    { title: "AI Chatbot Integration", description: "Local LLM orchestration with FastAPI." },
+    { title: "Scalable REST API Design", description: "Repository pattern for data persistence." }
+  ],
+  writing: [
+    { title: "Building JWT Authentication with FastAPI", url: "#" },
+    { title: "Designing RBAC Authorization Systems", url: "#" },
+    { title: "Integrating AI Chatbots with Local LLMs", url: "#" }
   ],
   education: [
     {
-      degree: "Bachelor of Technology, Electrical and Electronics engineering",
-      institution: "Ajay Kumar Garg Engineering college Ghaziabad",
-      location: "Ghaziabad, Uttar Pradesh",
-      dates: "2022"
+      degree: "B.Tech, Electrical & Electronics Engineering",
+      institution: "AKGEC Ghaziabad",
+      location: "Ghaziabad, India",
+      dates: "2018 - 2022"
     }
-  ],
-  certifications: [],
-  awards: [],
-  extra: []
+  ]
 };

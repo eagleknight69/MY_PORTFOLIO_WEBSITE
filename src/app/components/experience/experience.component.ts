@@ -8,66 +8,8 @@ import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive'
   selector: 'app-experience',
   standalone: true,
   imports: [CommonModule, LucideAngularModule, ScrollRevealDirective],
-  template: `
-    <section id="experience" class="py-24 px-6 md:px-12 lg:px-24">
-      <div class="max-w-4xl mx-auto">
-        <div appScrollReveal class="mb-16">
-          <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">Experience</h2>
-          <div class="h-1 w-20 bg-emerald-500 rounded-full"></div>
-        </div>
-
-        <div class="space-y-6">
-          <div
-            *ngFor="let exp of resumeData.experience; let i = index"
-            appScrollReveal [delay]="i * 100"
-            class="group border border-white/10 bg-white/[0.02] rounded-2xl overflow-hidden hover:bg-white/[0.04] transition-colors"
-          >
-            <button
-              (click)="toggleExpand(i)"
-              class="w-full text-left p-6 md:p-8 flex items-start justify-between gap-4"
-            >
-              <div>
-                <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">
-                  {{ exp.role }}
-                </h3>
-                <div class="text-emerald-400 font-medium mb-4">{{ exp.company }}</div>
-                <div class="flex flex-wrap gap-4 text-sm text-white/50 font-mono">
-                  <span class="flex items-center gap-1">
-                    <lucide-icon name="calendar" class="w-4 h-4"></lucide-icon> {{ exp.dates }}
-                  </span>
-                  <span class="flex items-center gap-1">
-                    <lucide-icon name="map-pin" class="w-4 h-4"></lucide-icon> {{ exp.location }}
-                  </span>
-                </div>
-              </div>
-              <div
-                class="p-2 rounded-full bg-white/5 text-white/50 group-hover:text-white transition-all duration-300"
-                [style.transform]="expandedIndex === i ? 'rotate(180deg)' : 'rotate(0deg)'"
-              >
-                <lucide-icon name="chevron-down" class="w-5 h-5"></lucide-icon>
-              </div>
-            </button>
-
-            <div
-              class="overflow-hidden transition-all duration-300 ease-in-out"
-              [style.maxHeight]="expandedIndex === i ? '1000px' : '0'"
-              [style.opacity]="expandedIndex === i ? '1' : '0'"
-            >
-              <div class="px-6 md:px-8 pb-8 pt-0">
-                <div class="w-full h-px bg-white/10 mb-6"></div>
-                <ul class="space-y-4">
-                  <li *ngFor="let bullet of exp.bullets" class="flex items-start gap-3 text-white/70">
-                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500/50 shrink-0"></span>
-                    <span class="leading-relaxed">{{ bullet }}</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  `
+  templateUrl: './experience.component.html',
+  styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent {
   resumeData = resumeData;

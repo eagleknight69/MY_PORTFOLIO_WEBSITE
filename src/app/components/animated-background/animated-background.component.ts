@@ -3,13 +3,8 @@ import { Component, ElementRef, OnInit, OnDestroy, ViewChild, AfterViewInit } fr
 @Component({
   selector: 'app-animated-background',
   standalone: true,
-  template: `
-    <canvas
-      #canvas
-      class="fixed inset-0 w-full h-full pointer-events-none z-[-1]"
-      style="background: linear-gradient(to bottom right, #0a0a0f, #141923)"
-    ></canvas>
-  `
+  templateUrl: './animated-background.component.html',
+  styleUrl: './animated-background.component.scss'
 })
 export class AnimatedBackgroundComponent implements AfterViewInit, OnDestroy {
   @ViewChild('canvas') canvasRef!: ElementRef<HTMLCanvasElement>;
