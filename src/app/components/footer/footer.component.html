@@ -12,7 +12,7 @@
         <lucide-icon name="phone" class="w-5 h-5"></lucide-icon>
       </a>
       <a *ngFor="let link of resumeData.basics.links" [href]="link.url" target="_blank" rel="noopener noreferrer" class="text-white/50 hover:text-white transition-colors">
-        <lucide-icon name="linkedin" class="w-5 h-5"></lucide-icon>
+        <lucide-icon [name]="link.icon" class="w-5 h-5"></lucide-icon>
       </a>
     </div>
   </div>

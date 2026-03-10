@@ -8,6 +8,7 @@ import { ImpactStripComponent } from './components/impact-strip/impact-strip.com
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
@@ -23,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ExperienceComponent,
     ProjectsComponent,
     SkillsComponent,
+    ContactComponent,
     FooterComponent
   ],
   templateUrl: './app.component.html',

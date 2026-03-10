@@ -148,5 +148,10 @@ export const resumeData = {
       location: "Ghaziabad, India",
       dates: "2018 - 2022"
     }
+  ],
+  achievements: [
+    { title: "90% SEO Performance", context: "Optimized Angular landing pages for maximum search visibility and accessibility." },
+    { title: "40% Faster Load Times", context: "Reduced API latency and optimized frontend rendering for better user experience." },
+    { title: "25% Higher Conversion", context: "Improved UI/UX flow leading to significant increase in user engagement." }
   ]
 };
